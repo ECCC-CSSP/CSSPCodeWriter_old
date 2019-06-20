@@ -1243,7 +1243,7 @@ namespace CSSPServicesGenerateCodeHelper
             {
                 fiCSSPEnumsDLL = new FileInfo(@"C:\CSSPCode\CSSPEnums\CSSPEnums\bin\Debug\CSSPEnums.dll");
                 fiCSSPServicesDLL = new FileInfo(@"C:\CSSPCode\CSSPServices\CSSPServices\bin\Debug\CSSPServices.dll");
-                fiCSSPWebAPIDLL = new FileInfo(@"C:\CSSPCode\CSSPWebAPI\CSSPWebAPI\bin\CSSPWebAPI.dll");
+                fiCSSPWebAPIDLL = new FileInfo(@"C:\CSSPCode\CSSPWebAPI\CSSPWebAPI\bin\debug\CSSPWebAPI.dll");
 
                 if (!fiCSSPEnumsDLL.Exists)
                 {
