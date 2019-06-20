@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1D7F5013-4EAA-41CD-AD24-4E03EE5F0A85}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSSPEnumsCodeWriter</RootNamespace>
+    <AssemblyName>CSSPEnumsCodeWriter</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSSPEnums">
+      <HintPath>..\..\CSSPEnums\CSSPEnums\bin\Debug\CSSPEnums.dll</HintPath>
+    </Reference>
+    <Reference Include="CSSPPolSourceGroupingExcelFileRead">
+      <HintPath>..\..\CSSPPolSourceGroupingExcelFileRead\CSSPPolSourceGroupingExcelFileRead\bin\Debug\CSSPPolSourceGroupingExcelFileRead.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EnumsAndPolSourceInfoEnumsWithDocGenerate.cs" />
+    <Compile Include="CompareEnumsAndOldEnums.cs" />
+    <Compile Include="EnumsGenerate.cs" />
+    <Compile Include="EnumsTestGenerate.cs" />
+    <Compile Include="EnumsPolSourceCodeWriter.cs" />
+    <Compile Include="FillPolSourceObsInfoChildServiceGenerated.cs" />
+    <Compile Include="EnumsPolSourceInfoGenerated.cs" />
+    <Compile Include="EnumsPolSourceObsInfoEnumTestGenerated.cs" />
+    <Compile Include="PolSourceInfoEnumGeneratedRes.cs" />
+    <Compile Include="PolSourceInfoEnumGeneratedResFR.cs" />
+    <Compile Include="PolSourceObsInfoEnumGenerated.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSSPCodeWriterBase\CSSPCodeWriterBase.csproj">
+      <Project>{ca6de78f-d190-4b97-a16d-47b0a998e943}</Project>
+      <Name>CSSPCodeWriterBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
